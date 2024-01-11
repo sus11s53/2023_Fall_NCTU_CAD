@@ -1,7 +1,7 @@
 CC = g++
 
-Quine-McCluskey.o : Quine-McCluskey.cpp
-	$(CC) -o Quine-McCluskey.o Quine-McCluskey.cpp
+310513081.o : 310513081.cpp
+	$(CC) -o 310513081.o 310513081.cpp
   
 clean:
 	rm *.o
