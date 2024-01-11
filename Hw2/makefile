@@ -1,10 +1,10 @@
 CC = g++ -std=c++11
 
-310513081.out : 310513081.o Liberty.o NetList.o Wire.o Gate.o
-	$(CC) -o 310513081 310513081.o Liberty.o NetList.o Wire.o Gate.o
+STA.out : STA.o Liberty.o NetList.o Wire.o Gate.o
+	$(CC) -o STA STA.o Liberty.o NetList.o Wire.o Gate.o
 
-310513081.o : 310513081.cpp NetList.h
-	$(CC) -c 310513081.cpp
+STA.o : STA.cpp NetList.h
+	$(CC) -c STA.cpp
 
 Liberty.o : Liberty.cpp Liberty.h
 	$(CC) -c Liberty.cpp
@@ -20,7 +20,7 @@ Gate.o : Gate.cpp Gate.h Wire.h
 
 clean :
 	rm *.o
-	rm 310513081
+	rm STA
 	rm *.v
 	rm *.txt
 	rm *.lib
