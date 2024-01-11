@@ -1,0 +1,15 @@
+//Verilog-AMS HDL for "ADC", "comp" "verilogams"
+
+`include "constants.vams"
+`include "disciplines.vams"
+
+module comp (i,vref,o);
+	input i , vref;
+	output o;
+	reg o;
+	electrical i , vref;
+
+	always begin @(cross(V(i) - V(vref) , +1))o = 1; end
+	always begin @(cross(V(i) - V(vref) , -1))o = 0; end
+    
+endmodule
